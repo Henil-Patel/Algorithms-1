@@ -1,4 +1,7 @@
+import java.io.File;
 import java.util.Arrays;
+import edu.princeton.cs.algs4.*;
+
 
 public class BinarySearch
 {
@@ -27,7 +30,10 @@ public class BinarySearch
 
     public static void main(String[] args)
     {
-        System.out.println("Testing pending");
-
+        System.out.println("Hello world");
+        In in = new In(args[0]);
+        int[] whiteList = in.readAllInts();
+        System.out.println(Arrays.toString(whiteList));
+        
     }
 }

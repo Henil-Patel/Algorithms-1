@@ -1,4 +1,3 @@
-import java.io.File;
 import java.util.Arrays;
 import edu.princeton.cs.algs4.*;
 
@@ -30,10 +29,16 @@ public class BinarySearch
 
     public static void main(String[] args)
     {
-        System.out.println("Hello world");
+        //System.out.println("Hello world");
         In in = new In(args[0]);
         int[] whiteList = in.readAllInts();
-        System.out.println(Arrays.toString(whiteList));
-        
+        //System.out.println(Arrays.toString(whiteList));
+        Arrays.sort(whiteList);
+        while(!StdIn.isEmpty()){
+            int key = StdIn.readInt();
+            if (rank(key, whiteList) == -1) {
+                StdOut.println(key);
+            }
+        }
     }
 }

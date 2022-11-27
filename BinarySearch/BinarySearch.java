@@ -34,10 +34,13 @@ public class BinarySearch
         int[] whiteList = in.readAllInts();
         //System.out.println(Arrays.toString(whiteList));
         Arrays.sort(whiteList);
+        //System.out.println("Sorted list for search");
         while(!StdIn.isEmpty()){
             int key = StdIn.readInt();
+            System.out.println(key);
             if (rank(key, whiteList) == -1) {
                 StdOut.println(key);
+                break;
             }
         }
     }
